@@ -6,13 +6,14 @@ public class BubbleSort
 {
 	/**
 	 * Initiate Comparable method
-	 * @param array   Array to be pivoted
+	 * @param array   Array to be sorted
 	 */
 	@SuppressWarnings("unchecked")
 	public static<T> void sort( Comparable<T>[] array) 
 	{
 		Comparable<T> temp;
 		
+		// decreasing size of array since largest item would be swapped to last index in each iteration 
 		for(int i = array.length - 1; i > 0; i--) 
 		{
 			for(int j = 0; j < i; j++) 
@@ -29,7 +30,7 @@ public class BubbleSort
 	
 	/**
 	 * Initiate Comparator method
-	 * @param array   Array to be pivoted
+	 * @param array   Array to be sorted
 	 * @param comp   Comparator
 	 */
 	@SuppressWarnings("unchecked")
@@ -37,6 +38,7 @@ public class BubbleSort
 	{
 		Comparable<T> temp;
 		
+		// decreasing size of array since largest item would be swapped to last index in each iteration 
 		for(int i = array.length - 1; i > 0; i--) 
 		{
 			for(int j = 0; j < i; j++) 

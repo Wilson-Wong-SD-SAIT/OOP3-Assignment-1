@@ -4,8 +4,6 @@ package manager;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import shapes.Shape;
-
 
 public class OutputManager 
 {

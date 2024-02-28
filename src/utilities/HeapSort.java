@@ -6,7 +6,7 @@ public class HeapSort
 {
 	/**
 	 * Initiate Comparable method
-	 * @param array   Array to be pivoted
+	 * @param array   Array to be sorted
 	 */
 	public static<T> void sort( Comparable<T>[] array) 
 	{
@@ -18,7 +18,7 @@ public class HeapSort
 			heapify(array, n, i);
 		}
 		
-		// reverse smallest item in min heaps continuously  
+		// reverse smallest items in min heaps of decreasing size
 		for(int i = n - 1 ; i > 0; i--) 
 		{
 			swapElements(array, 0, i);
@@ -28,7 +28,7 @@ public class HeapSort
 	
 	/**
 	 * Initiate Comparator method
-	 * @param array   Array to be pivoted
+	 * @param array   Array to be sorted
 	 * @param comp   Comparator
 	 */
 	public static<T> void sort( Comparable<T>[] array, Comparator<? super T> comp ) 
@@ -41,23 +41,21 @@ public class HeapSort
 			heapify(array, n, i, comp);
 		}
 		
-		// reverse smallest item in min heaps continuously  
+		// reverse smallest items in min heaps of decreasing size
 		for(int i = n - 1 ; i > 0; i--) 
 		{
 			swapElements(array, 0, i);
 			heapify(array, i, 0, comp);
 		}
-		
 	}
 	
 
 	
 	/**
-	 * Comparable method: Swap smaller items to left of Pivot, and larger items to right of Pivot
-	 * @param array   Array to be pivoted
-	 * @param left   Left most index of the Integer Array
-	 * @param right   Right most index of the Integer Array
-	 * @return        index of pivot 
+	 * Comparable method of Heapify
+	 * @param array   Array to be sorted
+	 * @param n       Length of the Array
+	 * @param i      index of the item to be heapified    
 	 */
 	@SuppressWarnings("unchecked")
 	private static<T> void heapify( Comparable<T>[] array, int n, int i ) 
@@ -77,13 +75,14 @@ public class HeapSort
 			min = right;
 		}
 		
-		// if i is no longer minimum, min heapify all child branches
+		// if i is not smaller than childs, swap and min heapify the child branch
 		if( min != i ) 
 		{
 			swapElements(array, min, i);
 			heapify(array, n, min);
 		}	
 		
+		// if left child is not smaller than right child, swap and min heapify the right branch
 		if( left < n && right < n && array[left].compareTo( (T) array[right] ) > 0 ) 
 		{
 			swapElements(array, left, right);
@@ -93,14 +92,12 @@ public class HeapSort
 	}
 	
 
-	
 	/**
-	 * Comparator method: Swap smaller items to left of Pivot, and larger items to right of Pivot
-	 * @param array   Array to be pivoted
-	 * @param left   Left most index of the Integer Array
-	 * @param right   Right most index of the Integer Array
-	 * @param comp   Comparator
-	 * @return        index of pivot 
+	 * Comparator method of Heapify
+	 * @param array   Array to be sorted
+	 * @param n       Length of the Array
+	 * @param i      index of the item to be heapified  
+	 * @param comp   Comparator  
 	 */
 	@SuppressWarnings("unchecked")
 	private static<T> void heapify( Comparable<T>[] array, int n, int i, Comparator<? super T> comp) 
@@ -121,13 +118,14 @@ public class HeapSort
 			min = right;
 		}
 		
-		// if i is no longer minimum, min heapify all child branches
+		// if i is not smaller than childs, swap and min heapify the child branch
 		if( min != i ) 
 		{
 			swapElements(array, min, i);
 			heapify(array, n, min, comp);
 		}	
 		
+		// if left child is not smaller than right child, swap and min heapify the right branch
 		if( left < n && right < n && comp.compare( (T) array[left], (T) array[right] ) > 0 ) 
 		{
 			swapElements(array, left, right);

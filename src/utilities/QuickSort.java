@@ -6,7 +6,7 @@ public final class QuickSort
 {
 	/**
 	 * Initiate Comparable method
-	 * @param array   Array to be pivoted
+	 * @param array   Array to be sorted
 	 */
 	public static<T> void sort( Comparable<T>[] array) 
 	{
@@ -15,7 +15,7 @@ public final class QuickSort
 	
 	/**
 	 * Initiate Comparator method
-	 * @param array   Array to be pivoted
+	 * @param array   Array to be sorted
 	 * @param comp   Comparator
 	 */
 	public static<T> void sort( Comparable<T>[] array, Comparator<? super T> comp ) 
@@ -60,8 +60,8 @@ public final class QuickSort
 	/**
 	 * Comparable method: Swap smaller items to left of Pivot, and larger items to right of Pivot
 	 * @param array   Array to be pivoted
-	 * @param left   Left most index of the Integer Array
-	 * @param right   Right most index of the Integer Array
+	 * @param left   Left most index of the Array
+	 * @param right   Right most index of the Array
 	 * @return        index of pivot 
 	 */
 	@SuppressWarnings("unchecked")
@@ -91,8 +91,8 @@ public final class QuickSort
 	/**
 	 * Comparator method: Swap smaller items to left of Pivot, and larger items to right of Pivot
 	 * @param array   Array to be pivoted
-	 * @param left   Left most index of the Integer Array
-	 * @param right   Right most index of the Integer Array
+	 * @param left   Left most index of the Array
+	 * @param right   Right most index of the Array
 	 * @param comp   Comparator
 	 * @return        index of pivot 
 	 */
