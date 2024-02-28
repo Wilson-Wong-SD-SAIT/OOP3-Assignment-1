@@ -17,7 +17,7 @@ public class InsertionSort
 		{
 			temp = array[i];
 			
-			while( j >= 0 && temp.compareTo((T)array[j]) > 0 ) 
+			while( j >= 0 &&  temp.compareTo((T)array[j]) > 0 ) 
 			{			
 				array[j+1] = array[j];
 				j--;

@@ -1,5 +1,6 @@
 package manager;
 
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -33,7 +34,7 @@ public class OutputManager
 				for(int i = 999; i < cm.getShapes().length - 1; i += 1000) 
 				{
 					m = cm.getShapes()[i].getClass().getMethod(compareParameter);
-					System.out.println( i + "th sorted value: " +  m.invoke(cm.getShapes()[i]));
+					System.out.println( i +1 + "th sorted value: " +  m.invoke(cm.getShapes()[i]));
 				}
 			}
 			// display last sorted value
@@ -48,7 +49,7 @@ public class OutputManager
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
 			e.printStackTrace();
-		}
+		} 
 
 	}
 }

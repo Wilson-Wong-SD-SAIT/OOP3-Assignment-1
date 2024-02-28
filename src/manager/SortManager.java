@@ -37,7 +37,7 @@ public class SortManager
 		else if( cm.getSortType() == 'z' ) 
 		{	
 			// implement customized sorting
-			this.sortClass = "QuickSort";
+			this.sortClass = "HeapSort";
 		}
 		// invalid argument
 		else 
