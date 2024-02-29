@@ -10,7 +10,7 @@ public class OctagonalPrism extends Prism
 	
 	@Override
 	public double calcBaseArea() {
-		return 5 * Math.pow(side, 2) * Math.tan(54) / 4;
+		return 2 * (1 + Math.sqrt(2)) * Math.pow(side, 2);
 	}
 	
 	@Override

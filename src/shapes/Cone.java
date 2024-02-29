@@ -27,7 +27,7 @@ public class Cone extends Shape
 	
 	@Override
 	public double calcVolume() {
-		return Math.PI * Math.pow(radius, 2) * height / 3;
+		return this.calcBaseArea() * height / 3;
 	}
 
 }

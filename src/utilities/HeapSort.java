@@ -13,7 +13,7 @@ public class HeapSort
 		int n = array.length;
 		
 		// build min heap
-		for(int i = n/2 -1 ; i >= 0; i--) 
+		for(int i = n/2 -1 ; i > -1; i--) 
 		{
 			heapify(array, n, i);
 		}
@@ -36,7 +36,7 @@ public class HeapSort
 		int n = array.length;
 		
 		// build min heap
-		for(int i = n/2 -1 ; i >= 0; i--) 
+		for(int i = n/2 -1 ; i > -1; i--) 
 		{
 			heapify(array, n, i, comp);
 		}

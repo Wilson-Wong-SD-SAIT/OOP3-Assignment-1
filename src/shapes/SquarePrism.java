@@ -9,7 +9,7 @@ public class SquarePrism extends Prism
 	
 	@Override
 	public double calcBaseArea() {
-		return Math.pow(side, 2) * Math.sqrt(3) / 4;
+		return Math.pow(side, 2);
 	}
 	
 	@Override
